@@ -1,0 +1,10 @@
+<div *ngIf="course">
+  <h2>{{ course.name | uppercase }}Details</h2>
+  <!--Pipe and interpolation-->
+  <div><span>ID:</span>{{ course.id }}</div>
+  <div>
+    <label for=""
+      >Name: <input type="text" [(ngModel)]="course.name" placeholder="name"
+    /></label>
+  </div>
+</div>
