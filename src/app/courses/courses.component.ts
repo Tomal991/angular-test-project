@@ -5,21 +5,19 @@ import { Courses } from './mock-courses';
 @Component({
   selector: 'app-courses',
   templateUrl: './courses.component.html',
-  styleUrls: ['./courses.component.css']
+  styleUrls: ['./courses.component.css'],
 })
 export class CoursesComponent implements OnInit {
+  courses = Courses;
+  selectedCourse: Course;
+  constructor(private courseService: CourseService) {}
 
-  courses=Courses;
-  selectedCourse:Course;
-  constructor(private courseService:CourseService) { }
-
-  ngOnInit(): void {
+  ngOnInit(): void {}
+  onSelect(course: Course): void {
+    this.selectedCourse = course;
   }
-onSelect(course:Course):void{
-this.selectedCourse=course;
-}
 
-getCourses():void{
-  this.courseService.getCourses().subscribe(courses=>this.courses)
-}
+  getCourses(): void {
+    this.courseService.getCourses().subscribe((courses) => this.courses);
+  }
 }

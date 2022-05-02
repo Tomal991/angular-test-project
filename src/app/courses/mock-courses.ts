@@ -1,7 +1,7 @@
 import { Course } from "../course";
 
 
-export const Courses :Course[]=[
+export const Courses =[
     {
         id:1,
         name:"Java"

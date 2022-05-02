@@ -12,7 +12,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     AppComponent,
     CoursesComponent,
     CourseDetailComponent,
-    DashboardComponent
+    DashboardComponent 
   ],
   imports: [
     BrowserModule,
